@@ -1,23 +1,13 @@
 const mongoose = require('mongoose');
 const Promise = require('bluebird');
 const faker = require('faker');
+const db = require('./database/index.js')
 
 mongoose.connect('mongodb://localhost/reviews', {useUnifiedTopology:true, useNewUrlParser: true }).catch(error => console.log(error))
 
-var Schema = mongoose.Schema;
-
-var reviews = new Schema({
-  item_img: String,
-  item_url: String,
-  username: String,
-  thumbnail: String,
-  body: String,
-  star_rating: Number,
-  user_img: String,
-  date: Date,
-})
-
-var User_1 = mongoose.model('User_1', reviews);
+var Schema = db.Schema;
+var reviews = db.reviews;
+var User_1 = db.User_1;
 
 User_1.collection.drop()
   .then((res)=> console.log(res))
@@ -41,7 +31,6 @@ for (let i =0; i < 100; i++) {
   }
   data.push(curreview)
 }
-// console.log(data)
 
 User_1.collection.insertMany(data,(err, docs)=> {
   if (err) {
