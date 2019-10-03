@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const Promise = require('bluebird');
-const faker = require('faker')
 
 mongoose.connect('mongodb://localhost/reviews', {useUnifiedTopology:true, useNewUrlParser: true }).catch(error => console.log(error))
 

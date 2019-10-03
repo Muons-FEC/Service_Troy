@@ -41,7 +41,6 @@ for (let i =0; i < 100; i++) {
   }
   data.push(curreview)
 }
-// console.log(data)
 
 User_1.collection.insertMany(data,(err, docs)=> {
   if (err) {
