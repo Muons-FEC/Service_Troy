@@ -29,4 +29,9 @@ function query(cb) {
   })
 }
 
-module.exports.query = query
+module.exports = {
+  query,
+  Schema,
+  reviews,
+  User_1
+}
