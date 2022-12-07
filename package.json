@@ -15,7 +15,7 @@
   "dependencies": {
     "babel": "^6.23.0",
     "bluebird": "^3.5.5",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "faker": "^4.1.0",
     "mongodb": "^3.3.2",
     "mongoose": "^5.7.1",
